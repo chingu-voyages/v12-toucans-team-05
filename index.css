@@ -1,0 +1,36 @@
+.border-boundary{
+    border: 1px solid black;
+}
+header{
+    margin: 1em;
+    text-align: center;
+}
+section{
+    margin: 1em;
+}
+p{
+    font-size: 1.5em;
+    padding: 1em;
+    text-align: center;
+}
+#welcome-text{
+    text-align: justify;
+}
+h1{
+    padding: 1em
+}
+input[type=button]{
+    padding: 0.5em;
+    font-size: 2.5em;
+    margin: 0.2em;
+}
+input[type=search]{
+    display: block;
+    padding: 0.5em;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 1em auto;
+}
+#buttons{
+    text-align: center
+}
