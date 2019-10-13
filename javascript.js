@@ -21,11 +21,11 @@ function displayArticle(){
   let elHook = document.getElementById("div1");
   
   //Create article-box div
-  let elAdd = document.createElement('div');
+  let elAdd = document.createElement('article');
   elAdd.setAttribute("class", "article-box");
 
   //Create text-box div
-  let elText = document.createElement('div');
+  let elText = document.createElement('section');
   elText.setAttribute("class", "text-box");
   elAdd.appendChild(elText);
 
@@ -41,7 +41,7 @@ function displayArticle(){
   elLocation.appendChild(textLocation);
 
   //Create date-box div within text-box div
-  let elDate = document.createElement('div');
+  let elDate = document.createElement('time');
   elDate.setAttribute("class", "date-box");
   elText.appendChild(elDate);
 
@@ -52,7 +52,7 @@ function displayArticle(){
   elDate.appendChild(textDate);
   
   //Create review-box div within text-box div
-  let elReview = document.createElement('div');
+  let elReview = document.createElement('textarea');
   elReview.setAttribute("class", "review-box");
   elText.appendChild(elReview);    
 
@@ -74,7 +74,7 @@ function displayArticle(){
   elAurthor.appendChild(textAurthor);
 
   //Create img-box div  
-  let elImg = document.createElement('div');
+  let elImg = document.createElement('figure');
   elImg.setAttribute("class", "img-box");
   elAdd.appendChild(elImg);  
 
