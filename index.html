@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1.0, width=device-width" >
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     </head>
     <body>
         <header class="border-boundary">
@@ -13,21 +14,24 @@
             <p id="welcome-text" class="border-boundary">
                 We love travelling all over the world. So much so that we decided to set up a blog to share our experiences with others. Look through our posts and find out where we've been and what we thought of those places..
             </p>
-            <p class="border-boundary">
+            <div id="buttons">
+            <p class="border-boundary" id="post-list">
                 Decide how you would like to list the posts
             </p>
-            <div id="buttons">
+            
             <input type="button" value="chronologically"/>
             <input type="button" value="alphabetically"/>
             </div>
+            <div id="search-box">
             <p class="border-boundary">
                 Select a post by country or city
             </p>
-            <input type="search" />
+            <input type="search" value="&#xf002"/>
+            </div>
             
         </section>
         <section id="search-result" >
-            <div class="border-boundary">
+            <div class="placeholder">
 
             </div>
 
