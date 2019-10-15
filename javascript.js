@@ -17,8 +17,14 @@ let articles = [
   }
 ]
 
-function displayArticle(){
-  let elHook = document.getElementById("div1");
+function selectArticles(){
+  for(let i=0;i<articles.length;i++){
+    displayArticle(i);
+  }
+}
+
+function displayArticle(artNum){
+  let elHook = document.getElementById("search-result");
   
   //Create article-box div
   let elAdd = document.createElement('article');
@@ -35,7 +41,7 @@ function displayArticle(){
   elText.appendChild(elLocation);
 
   let textLocation  = document.createElement('p');
-  let stringLocation = articles[0].location;
+  let stringLocation = articles[artNum].location;
   textLocation.append(document.createTextNode(stringLocation));
   textLocation.setAttribute("class", "location-text");
   elLocation.appendChild(textLocation);
@@ -46,18 +52,18 @@ function displayArticle(){
   elText.appendChild(elDate);
 
   let textDate  = document.createElement('p');
-  let stringDate = articles[0].date;
+  let stringDate = articles[artNum].date;
   textDate.append(document.createTextNode(stringDate));
   textDate.setAttribute("class", "date-text");
   elDate.appendChild(textDate);
   
   //Create review-box div within text-box div
-  let elReview = document.createElement('textarea');
+  let elReview = document.createElement('div');
   elReview.setAttribute("class", "review-box");
   elText.appendChild(elReview);    
 
   let textReview  = document.createElement('p');
-  let stringReview = articles[0].review;
+  let stringReview = articles[artNum].review;
   textReview.append(document.createTextNode(stringReview));
   textReview.setAttribute("class", "review-text");
   elReview.appendChild(textReview);
@@ -68,7 +74,7 @@ function displayArticle(){
   elText.appendChild(elAurthor);
 
   let textAurthor  = document.createElement('p');
-  let stringAurthor = articles[0].author;
+  let stringAurthor = articles[artNum].author;
   textAurthor.append(document.createTextNode(stringAurthor));
   textAurthor.setAttribute("class", "author-text");
   elAurthor.appendChild(textAurthor);
@@ -80,11 +86,11 @@ function displayArticle(){
 
   //Create img element in img-box div
   let imgTag  = document.createElement('img');
-  imgTag.src=articles[0].img;
+  imgTag.src=articles[artNum].img;
   imgTag.setAttribute("class", "pic-of-location");
   elImg.appendChild(imgTag);  
 
   elHook.appendChild(elAdd);
 }
 
-window.onload = displayArticle;
+window.onload = selectArticles;
