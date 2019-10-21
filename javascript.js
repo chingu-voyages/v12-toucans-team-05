@@ -3,17 +3,24 @@
 let articles = [
   {
     location : 'Paris',
-    date : '2nd of June 2016',
+    date : '2018-02-06',
     author : 'Nick',
     review : 'We absolutely loved this place',
     img : 'Paris-Pic.jpg'
   },
   {
     location : 'London',
-    date : '1/3/2016',
+    date : '2015-12-01',
     author : 'Ben',
     review : 'Lovely location',
     img : 'London-Pic.jpg'
+  },
+  {
+    location : 'New York',
+    date : '2019-3-020',
+    author : 'Paul',
+    review : 'Lovely location',
+    img : 'New-York-Pic.jpg'
   }
 ]
 
@@ -52,7 +59,9 @@ function displayArticle(artNum){
   elText.appendChild(elDate);
 
   let textDate  = document.createElement('p');
-  let stringDate = articles[artNum].date;
+
+  let stringDate = makeStringDate(articles[artNum].date);
+
   textDate.append(document.createTextNode(stringDate));
   textDate.setAttribute("class", "date-text");
   elDate.appendChild(textDate);
@@ -92,5 +101,36 @@ function displayArticle(artNum){
 
   elHook.appendChild(elAdd);
 }
+
+
+function makeStringDate(hypDate){
+
+  let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+  let parts = hypDate.split('-');
+  let mydate = new Date(parts[0], parts[1] - 1, parts[2]); 
+
+  let dateString=days[mydate.getDay()];
+  dateString+=" the ";
+  dateString+=mydate.getDate();
+
+  if(mydate.getDate()==1||mydate.getDate()==21||mydate.getDate()==31){
+    dateString+="st of ";
+  }else if(mydate.getDate()==2||mydate.getDate()==22){
+    dateString+="nd of ";
+  }else if(mydate.getDate()==3||mydate.getDate()==23){
+    dateString+="rd of ";
+  }else{
+    dateString+="th of ";
+  }
+  dateString+=months[mydate.getMonth()];
+  dateString+=" ";
+  dateString+=mydate.getFullYear();
+
+  return dateString;
+}
+
+
 
 window.onload = selectArticles;
