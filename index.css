@@ -6,7 +6,7 @@ body{
     "l l r r"
     "v v p p"
     "f f f f";
-}/*
+}
 #nav_menu{
     grid-area: h;
     background-color: burlywood;
@@ -28,7 +28,7 @@ ul {
 ul li{
     margin: 1em;
     color: brown;
-}
+}/*
 #hero{
     padding: relative;
     grid-column: h/h;
