@@ -1,51 +1,73 @@
 <script>
 
-  let myArray=[5,2,6,8];
-
-  console.log(myArray);
-
-  myArray.sort((a,b)=>{return a-b});
-
-  console.log(myArray);
-
-
-  let myArrayOfObjects=[
-    {x:20},
-    {x:15},
-    {x:30}
-  ]
-
-  console.log(myArrayOfObjects);
-  console.log(myArrayOfObjects[0].x);
-
-  myArrayOfObjects.sort((a,b)=>{return a.x - b.x});
-
-  console.log(myArrayOfObjects);
-
-
-
-
-/*
-  let articles = [
+let articles = [
   {
     location : 'Paris',
-    date : '3rd of Oct',
+    date : '2018-02-06',
+    author : 'Nick',
+    review : 'We absolutely loved this place',
+    img : 'Paris-Pic.jpg'
   },
   {
     location : 'London',
-    date : '2nd of Jan',
+    date : '2015-12-01',
+    author : 'Ben',
+    review : 'Lovely location',
+    img : 'London-Pic.jpg'
   },
   {
-    location : 'Xanado',
-    date : '2nd of March',
+    location : 'New York',
+    date : '2019-03-20',
+    author : 'Paul',
+    review : 'Lovely location',
+    img : 'New-York-Pic.jpg'
   }
-];
+]
 
-console.log(articles[0].location);
+function selectArticles(){
+  console.log("in select");
+  for(let i=0;i<articles.length;i++){
+//    displayArticle(i);
+    console.log(articles[i]);
+  }
+}
 
-*/
+function chronArticles(){
+  console.log("in chron");
+  articles.sort((a,b)=>{
+    let x = a.date.replace(/-/g,"");
+    let y = b.date.replace(/-/g,"");
+    return x - y
+  });  
+  for(let i=0;i<articles.length;i++){
+//    displayArticle(i);
+    console.log(articles[i]);
+  }
+}
 
 
+function alphaArticles(){
+  console.log("in alpha");
+  articles.sort((a,b)=>{
+    let x = a.location.charAt(0).toUpperCase().charCodeAt();
+    console.log(x);
+    let y = b.location.charAt(0).toUpperCase().charCodeAt();
+    console.log(y);
+    return x - y;
+  });  
+  for(let i=0;i<articles.length;i++){
+//    displayArticle(i);
+    console.log(articles[i]);
+  }
+
+}
+
+
+window.onload = function(){
+//  selectArticles();
+//  chronArticles();
+  alphaArticles();
+}
 
 
 
