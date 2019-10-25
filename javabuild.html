@@ -50,9 +50,7 @@ function alphaArticles(){
   console.log("in alpha");
   articles.sort((a,b)=>{
     let x = a.location.charAt(0).toUpperCase().charCodeAt();
-    console.log(x);
     let y = b.location.charAt(0).toUpperCase().charCodeAt();
-    console.log(y);
     return x - y;
   });  
   for(let i=0;i<articles.length;i++){
@@ -64,8 +62,8 @@ function alphaArticles(){
 
 
 window.onload = function(){
-//  selectArticles();
-//  chronArticles();
+  selectArticles();
+  chronArticles();
   alphaArticles();
 }
 
