@@ -102,7 +102,6 @@ function displayArticle(artNum){
   elHook.appendChild(elAdd);
 }
 
-
 function makeStringDate(hypDate){
 
   let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -132,5 +131,34 @@ function makeStringDate(hypDate){
 }
 
 
+function imageClear(){
+  let list = document.getElementById("search-result");
+  if(list!==null){
+      while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+      }
+  }
+}
+
+function chronArticles(){
+  imageClear();
+  articles.sort((a,b)=>{
+    let x = a.date.replace(/-/g,"");
+    let y = b.date.replace(/-/g,"");
+    return x - y
+  });
+  selectArticles();
+}
+
+function alphaArticles(){
+  imageClear();
+  articles.sort((a,b)=>{
+    let x = a.location.charAt(0).toUpperCase().charCodeAt();
+    let y = b.location.charAt(0).toUpperCase().charCodeAt();
+    return x - y;
+  });
+  selectArticles();
+}
 
 window.onload = selectArticles;
+
