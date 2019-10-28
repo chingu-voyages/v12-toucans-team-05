@@ -1,0 +1,143 @@
+.border-boundary{
+  border: 1px solid black;
+}
+header{
+  margin: 1em;
+  text-align: center;
+}
+section{
+  margin: 1em;
+}
+p{
+  font-size: 1em;
+  padding: 0.5em;
+  text-align: center;
+}
+#welcome-text{
+  text-align: center;
+}
+h1{
+  padding: 1em;
+  font-size: 1em
+}
+input[type=button]{
+  padding: 0.5em;
+  font-size: 1em;
+  margin: 0.6em 8%;
+  border-radius: 10px;
+  width: 10em;
+}
+input[type=search]{
+  /*font-family: "Font Awesome 5 Free";*/
+  padding: 0.5em;
+  font-size: 1em;
+  text-align: center;
+  margin: 0.6em;
+  border-radius: 25px;
+  width: 80%
+}
+#search-box{
+  text-align: center;
+}
+#buttons{
+  text-align: center
+}
+@media (min-width:580px) {
+  html{font-size: 16px;}
+  h1{
+      font-size: 2rem;
+      padding: 0.5rem;
+  }
+  p{
+      font-size: 1.2rem;
+  }
+  #search-area {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: 1px solid black;
+      padding: 1em;
+  }
+  #buttons{
+      width: 53%;
+  }
+  #search-box{
+      width: 40%;
+      text-align: center;
+      margin-left: auto;
+  }
+}
+
+.article-box{
+  border: solid 1px black;
+  display:flex;
+  direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-around;
+  align-items:flex-start;
+  margin: 1em;
+}
+
+.text-box{
+  border: solid 1px black;
+  flex-grow:2;
+  margin: 1em;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+"location-box . date-box"
+"review-box review-box review-box"
+"review-box review-box review-box"
+"review-box review-box review-box"
+". . author-box";
+
+}
+
+.location-box{
+  grid-area: location-box;
+  text-align: center;
+}
+
+.date-box{
+  grid-area: date-box;			
+}
+
+.review-box{
+  grid-area: review-box;
+  text-align: center;
+}
+
+.author-box{
+  grid-area: author-box;
+  text-align: center;
+  font-style:italic;
+}
+
+.img-box{
+  border: solid 1px black;
+  flex-grow:1;
+  margin: 1em;
+}
+
+figure{
+  margin: 0;
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width:580px) {
+  
+  .article-box{
+    display:block;
+}
+
+.img-box{
+  border: solid 1px black;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+
+}
