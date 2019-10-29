@@ -1,72 +1,82 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Better JS</title>
 
-let articles = [
-  {
-    location : 'Paris',
-    date : '2018-02-06',
-    author : 'Nick',
-    review : 'We absolutely loved this place',
-    img : 'Paris-Pic.jpg'
-  },
-  {
-    location : 'London',
-    date : '2015-12-01',
-    author : 'Ben',
-    review : 'Lovely location',
-    img : 'London-Pic.jpg'
-  },
-  {
-    location : 'New York',
-    date : '2019-03-20',
-    author : 'Paul',
-    review : 'Lovely location',
-    img : 'New-York-Pic.jpg'
-  }
-]
+  <script>
 
-function selectArticles(){
-  console.log("in select");
-  for(let i=0;i<articles.length;i++){
-//    displayArticle(i);
-    console.log(articles[i]);
-  }
-}
+    let articles = [
+      {
+        location : 'Paris',
+        date : '2018-02-06',
+        author : 'Nick',
+        review : 'We absolutely loved this place',
+        img : 'Paris-Pic.jpg'
+      },
+      {
+        location : 'London',
+        date : '2015-12-01',
+        author : 'Ben',
+        review : 'Lovely location',
+        img : 'London-Pic.jpg'
+      },
+      {
+        location : 'New York',
+        date : '2019-03-20',
+        author : 'Paul',
+        review : 'Lovely location',
+        img : 'New-York-Pic.jpg'
+      }
+    ]
 
-function chronArticles(){
-  console.log("in chron");
-  articles.sort((a,b)=>{
-    let x = a.date.replace(/-/g,"");
-    let y = b.date.replace(/-/g,"");
-    return x - y
-  });  
-  for(let i=0;i<articles.length;i++){
-//    displayArticle(i);
-    console.log(articles[i]);
-  }
-}
+    function selectArticles(){
+      console.log("in select");
+      for(let i=0;i<articles.length;i++){
+    //    displayArticle(i);
+        console.log(articles[i]);
+      }
+    }
+
+    function chronArticles(){
+      console.log("in chron");
+      articles.sort((a,b)=>{
+        let x = a.date.replace(/-/g,"");
+        let y = b.date.replace(/-/g,"");
+        return x - y
+      });
+      for(let i=0;i<articles.length;i++){
+    //    displayArticle(i);
+        console.log(articles[i]);
+      }
+    }
+
+    function alphaArticles(){
+      console.log("in alpha");
+      articles.sort((a,b)=>{
+        let x = a.location.charAt(0).toUpperCase().charCodeAt();
+        let y = b.location.charAt(0).toUpperCase().charCodeAt();
+        return x - y;
+      });
+      for(let i=0;i<articles.length;i++){
+    //    displayArticle(i);
+        console.log(articles[i]);
+      }
+    }
+
+    window.onload = function(){
+      selectArticles();
+      chronArticles();
+      alphaArticles();
+    }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
 
 
-function alphaArticles(){
-  console.log("in alpha");
-  articles.sort((a,b)=>{
-    let x = a.location.charAt(0).toUpperCase().charCodeAt();
-    let y = b.location.charAt(0).toUpperCase().charCodeAt();
-    return x - y;
-  });  
-  for(let i=0;i<articles.length;i++){
-//    displayArticle(i);
-    console.log(articles[i]);
-  }
-
-}
-
-
-window.onload = function(){
-  selectArticles();
-  chronArticles();
-  alphaArticles();
-}
-
-
-
-</script>

@@ -3,14 +3,14 @@
 let articles = [
   {
     location : 'Paris',
-    date : '2018-02-06',
+    date : '2016-02-06',
     author : 'Nick',
     review : 'We absolutely loved this place',
     img : 'Paris-Pic.jpg'
   },
   {
     location : 'London',
-    date : '2015-12-01',
+    date : '2017-12-01',
     author : 'Ben',
     review : 'Lovely location',
     img : 'London-Pic.jpg'
