@@ -175,6 +175,12 @@ function displayArticle(artNum){
   }
 */
 
+function selectArticles(){
+  for(let i=0;i<articles.length;i++){
+    displayArticle(i);
+  }
+}
+
 function imageClear(){
     let list = document.getElementById("search-result");
     if(list!==null){
@@ -186,25 +192,20 @@ function imageClear(){
 
   function chronArticles(){
     imageClear();
-    displayArticle(0);
-/*   articles.sort((a,b)=>{
+   articles.sort((a,b)=>{
       let x = a.date.replace(/-/g,"");
       let y = b.date.replace(/-/g,"");
       return x - y
     });
     selectArticles();
-*/
   }
 
   function alphaArticles(){
     imageClear();
-    displayArticle(0);
-/*
     articles.sort((a,b)=>{
       let x = a.location.charAt(0).toUpperCase().charCodeAt();
       let y = b.location.charAt(0).toUpperCase().charCodeAt();
       return x - y;
     });
     selectArticles();
-*/
   }
