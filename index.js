@@ -6,21 +6,70 @@ let articles = [
       date : '2016-02-06',
       author : 'Nick',
       review : 'We absolutely loved this place',
-      img : 'images/bg-pic.jpg'
+      img : 'images/paris.jpg'
     },
     {
       location : 'London',
       date : '2017-12-01',
       author : 'Ben',
       review : 'Lovely location',
-      img : 'images/bg-pic.jpg'
+      img : 'images/london.jpg'
     },
     {
       location : 'New York',
       date : '2019-3-020',
       author : 'Paul',
       review : 'Lovely location',
-      img : 'images/bg-pic.jpg'
+      img : 'images/new_york.jpg'
+    },
+    {
+      location : 'Edinburgh',
+      date : '2011-03-07',
+      author : 'Matthew',
+      review : 'Lovely location',
+      img : 'images/edinburgh.jpg'
+    },
+    {
+      location : 'Mexico',
+      date : '2012-10-01',
+      author : 'Mark',
+      review : 'Lovely location',
+      img : 'images/mexico.jpg'
+    },
+    {
+      location : 'Berlin',
+      date : '2018-10-05',
+      author : 'Luke',
+      review : 'Lovely location',
+      img : 'images/berlin.jpg'
+    },
+    {
+      location : 'Rome',
+      date : '2012-05-05',
+      author : 'John',
+      review : 'Lovely location',
+      img : 'images/rome.jpg'
+    },
+    {
+      location : 'Barcelona',
+      date : '2014-01-10',
+      author : 'Peter',
+      review : 'Lovely location',
+      img : 'images/barcelona.jpg'
+    },
+    {
+      location : 'Moscow',
+      date : '2017-08-08',
+      author : 'Peter',
+      review : 'Lovely location',
+      img : 'images/moscow.jpg'
+    },
+    {
+      location : 'Tokyo',
+      date : '2016-02-04',
+      author : 'Peter',
+      review : 'Lovely location',
+      img : 'images/tokyo.jpg'
     }
   ]
 
