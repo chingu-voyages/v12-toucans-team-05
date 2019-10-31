@@ -1,0 +1,18 @@
+.box1 {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  border: 5px solid darkgreen;
+  color: darkgreen;
+  height: 150px;
+  width: 50%;
+  margin:auto;
+
+}
+
+.box1:hover{
+  color: pink;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+
+}
