@@ -1,0 +1,66 @@
+/*
+
+write html & css for form in storyEntry
+write css for main in storyEntry
+write javascript
+
+*/
+
+body{
+    margin: 0%;
+    /* display: flex; */
+    background-color: wheat;
+    /* flex-direction: column; */
+}
+form{
+    margin: 5vw;
+}
+
+fieldset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: violet;
+}
+
+
+fieldset input{
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    margin: 0.8em 0;
+    padding: 0.5em;
+}
+input[type=submit]{
+    width: 30%;
+    margin-left: 1em;
+}
+label{
+    margin: 1em;
+    font-size: 1.2em;
+}
+legend{
+    font-size: 2em;
+}
+span input{
+    width: 10%;
+    text-align: center;
+    padding: .5em;
+    margin: .4em;
+}
+span{
+    display: flex;
+    justify-content: center;
+    margin: 0em;
+}
+/* span > *{
+    display: none;
+} */
+.hide{
+    display: none;
+}
+.storyEntryElements{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
