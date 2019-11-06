@@ -24,7 +24,10 @@ const submitFunc=(event)=>{
     document.querySelector("#form").classList.add("hide");
     document.querySelector("span").classList.remove("hide")
 }
-const storyElement=(element)=>document.createElement(`${element}`).classList.add(".storyEntryElements");
+const storyElement=(element)=>{
+    let newStory  = document.createElement(`${element}`).classList.add(".storyEntryElements");
+    document.querySelector("#storyEntry").appendChild(newStory);
+}
 
 
 paragraph.addEventListener("click", ()=>storyElement("textArea"));
