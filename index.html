@@ -9,10 +9,9 @@
         <header id="nav_menu" >
             <span><em>the </em>Travel Blog</span>
             <ul>
-                <li>Home</li>
-                <li>Stories</li>
-                <li>Top Inspirers</li>
-                <li>Featured Video</li>
+                <li><a href="#nav_menu">Home</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#featured_video">Featured Video</a></li>
             </ul>
         </span>
         </header>
@@ -21,7 +20,8 @@
             <p>Write your travel stories</p>
             <h1>ADVENTURES</h1>
             <p>OR BE INSPIRED NOW</p>
-            <input type="button" value="GET STARTED">
+            <!-- <a href="storyEntry.html" class="inputLink"> -->
+            <input type="button" value="Write Your Story" onclick="window.location='storyEntry.html';" >
             <a link="#">View stories</a>
         </section>
         <section id="places_slider" class="screen_width">
@@ -55,10 +55,11 @@
                 <li>Featured</li>
                 <li>Recent</li>
             </ul>
-            <article class="span_6" >
+            <article class="slide" >
                 <img src="images/bg-pic.jpg" alt="first location" class="float_left" >
-                <div id="prompt">
-                    <h3>First Local</h3>
+                
+                <div class="prompt">
+                    <a href="#"><h3>First Local</h3></a>
                     <p>fjksjlfksfj klfjskfjlsjk lfskjksjdlfjk</p>
                     <figure id="contributor" src="images/bg-pic.jpg" class="float_left">
                         
