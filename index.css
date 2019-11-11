@@ -114,7 +114,12 @@ input[type=search] {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "location-box . date-box" "review-box review-box review-box" "review-box review-box review-box" "review-box review-box review-box" ". . author-box";
+  grid-template-areas:
+    "location-box . date-box"
+    "review-box review-box review-box"
+    "review-box review-box review-box"
+    "review-box review-box review-box"
+    ". . author-box";
 }
 
 .location-box {
