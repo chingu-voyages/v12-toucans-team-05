@@ -1,0 +1,216 @@
+body{
+    margin: 0%;
+    display: grid;
+    grid-template-areas: 
+    "h h h h"
+    "l l r r"
+    "v v p p"
+    "f f f f";
+}
+#nav_menu{
+    grid-area: h;
+    background-color: burlywood;
+}
+#nav_menu span{
+    margin-left: 10%;
+    font-size: 2.2vw;
+    color: black;
+}
+ul {
+    position: relative;
+    display: inline-flex;
+    color: brown;
+    list-style-type: none;
+    justify-content: center;
+
+    left: 40%;
+}
+ul li{
+    margin: 1em;
+    color: brown;
+}
+#hero{
+    padding: relative;
+    grid-column: h/h;
+    background:
+        linear-gradient(0deg, rgba(106, 106, 109, 0.356),rgba(121, 115, 115, 0.336)),
+        url("images/bg-pic.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height:90vh;
+}
+#hero h1{
+    color: white;
+    font-size:12vw;
+    font-weight: 400;
+    display: flex;
+    margin-left: 5%;
+    padding-top: 2%;
+}
+#hero p, a{
+    color: white;
+    font-size: 1.2em;
+}
+#hero p:first-of-type{
+    position: absolute;
+    right: 10%;
+    top: 20%
+}
+#hero p:nth-of-type(2){
+    position: absolute;
+    right: 10%;
+    top: 60%
+}
+#hero a {
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+}
+#hero input{
+    position: absolute;
+    left: 5%;
+    top: 75%;
+    padding: 1.3em 1.5em;
+    background-color: transparent;
+    color: white;
+}
+
+#places_slider{
+    grid-column: h/h;
+    background-color: black;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 60vh;
+    padding: 3em 1.5em;
+    margin-bottom: 3em;
+}
+#places_slider figure{
+    width: 25%;
+    height: 75%;
+    background-color: khaki;
+
+}
+#stories{
+
+    grid-column: l;
+    grid-column-end: l;
+    background-color: white;
+    padding: 0em 1.5em 3em 4.5em;
+}
+
+.article-box {
+/*    border: solid 1px black;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width:80%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1em;
+  }
+  
+  .text-box {
+/*    border: solid 1px black;*/
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "location-box . date-box"
+      "review-box review-box review-box"
+      "review-box review-box review-box"
+      "review-box review-box review-box"
+      ". . author-box";
+  }
+  
+  .location-box {
+    grid-area: location-box;
+    text-align: center;
+  }
+  
+  .location-text{
+      font-weight:bold;
+      font-size:22px;
+  }
+
+  .date-box {
+    grid-area: date-box;
+  }
+  
+  .review-box {
+    grid-area: review-box;
+    text-align: center;
+  }
+  
+  .author-box {
+    grid-area: author-box;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .img-box {
+/*    border: solid 1px black;*/
+    flex: 0 0 150px;
+    justify-content: center;
+    margin: 1em;
+  }
+  
+  .pic-of-location{
+    margin: 0;
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+
+
+#top_inspirers{
+    background-color: rgb(114, 190, 15);
+    grid-column: r;
+}
+#featured_video{
+    background-color: white;
+    grid-column: v;
+    padding: 3em 0 3em 4.5em;
+}
+#featured_video h2{
+    font-size: 2.2em;
+}
+#featured_playlist{
+    padding: 2em;
+    background-color: yellow;
+    grid-column: p;
+}
+video:first-of-type{
+    z-index: 1;
+    box-shadow: 3px 3px 20px 6px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    height: auto;
+}
+footer{
+    background-color: wheat;
+    grid-column: f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-top: 4.5em;
+}
+.float_left{
+    float: left;
+    border-radius: 15px;
+    margin: 0 2em 2em 0;
+} 
